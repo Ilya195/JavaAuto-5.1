@@ -34,7 +34,7 @@ public class ServiceTest {
     @Test
     @DisplayName("Should error if login blocked")
     void shouldGetErrorIfBlockedUser() {
-        var blockedUser = getRegisterUser("active");
+        var blockedUser = getRegisterUser("blocked");
         $("[data-test-id=login] input").setValue(blockedUser.getLogin());
         $("[data-test-id=password] input").setValue(blockedUser.getPassword());
         $("[data-test-id=action-login]").click();
